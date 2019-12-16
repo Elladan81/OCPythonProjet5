@@ -72,7 +72,104 @@ PAYLOAD = {
 PAGE_MIN = 1
 PAGE_MAX = 10
 
+# Different texts to display.
+Y_CHOICE = colored('Votre choix est:', attrs=['underline'])
+IMP = colored('IMPOSSIBLE', 'red', attrs=['dark', 'blink'])
+LOWER_YES = colored('o', 'green', attrs=['bold'])
+UPPER_YES = colored('O', 'green', attrs=['bold'])
+LOWER_NO = colored('n', 'red', attrs=['bold'])
+UPPER_NO = colored('N', 'red', attrs=['bold'])
+PLUS = colored('+', 'green', attrs=['bold'])
+LESS = colored('-', 'yellow', attrs=['bold'])
+QUIT = colored('q', 'cyan', attrs=['bold'])
+ID = colored('N°: ', 'cyan')
+NAME = colored('Nom: ', 'red')
+NUTRISCORE = colored('Nutriscore: ', 'green')
+SHOP = colored('Magasin: ', 'yellow')
+BRAND = colored('Marque: ', 'blue')
+LINK = colored('URL: ', 'white')
+SUBSTITUT = colored('Votre substitut: ', 'red', attrs=['blink'])
+PRODUCT = colored('Produit à remplacer: ', 'blue')
+N_SEARCH = colored('N° recherche: ', 'magenta')
 
+CHOOSE_CAT = colored(
+    'Sinon, sélectionnez une catégorie de produits par son numéro.',
+    attrs=['underline'])
+CHOOSE_PROD = colored(
+    'Sinon, sélectionnez un produit par son numéro pour le substituer.',
+    attrs=['underline'])
+ERROR_1 = colored(
+    'Choisir entre +, - ou q SVP', 'white',
+    'on_red', attrs=['blink'])
+ERROR_2 = colored(
+    'Choisir entre +, -, q ou un numéro SVP', 'white',
+    'on_red', attrs=['blink'])
+YOUR_CAT = colored(
+    'Vous êtes dans la catégorie: %s',
+    attrs=['underline'])
+
+# Variables used for menus
+MAIN_MENU_DECORATION_1 = colored(
+    '##################################################',
+    'blue', attrs=['blink'])
+
+MAIN_MENU_TITLE = colored(
+    'MENU PRINCIPAL', 'red', attrs=['underline'])
+
+MAIN_MENU_TEXT = ('\n Que voulez-vous faire :\t\t\t \n\
+    1) Quel aliment souhaitez vous remplacer ?\t\t \n\
+    2) Retrouver mes aliments substitués\t\t \n\
+    3) Consulter les catégories\t \n\
+    4) Retrouver les produits\t \n\
+    5) Quitter\t\t\t\t\t ')
+
+MAIN_MENU = ('\n\n%s \n \t %s \t\t\t %s \n%s' % (
+    MAIN_MENU_DECORATION_1, MAIN_MENU_TITLE, MAIN_MENU_TEXT, MAIN_MENU_DECORATION_1))
+
+SS_MENU = ("\t +----------------------------------+\
+    \n\t |Pour plus d'elements , taper '%s'  |\
+    \n\t |Pour moins d'elements , taper '%s' |\
+    \n\t |Pour quitter, taper '%s'           |\
+    \n\t +----------------------------------+ \n" % (
+    PLUS, LESS, QUIT))
+
+SS_MENU_2 = ("\t +-------------------------------------------+\
+    \n\t |Pour plus d'elements , tapez '%s'           |\
+    \n\t |Pour moins d'elements , tapez '%s'          |\
+    \n\t |Pour quitter, tapez '%s'                    |\
+    \n\t |Pour plus d'informations, tapez son numéro |\
+    \n\t +-------------------------------------------+ \n" % (
+    PLUS, LESS, QUIT))
+
+MENU_CHOOSE_CAT = ('\t +------------------------------------------------------------------+\
+    \n\t |Pour plus de categories, taper "%s"                                |\
+    \n\t |Pour moins de categories, taper "%s"                               |\
+    \n\t |Pour quitter, taper "%s"                                           |\
+    \n\t |                                                                  |\
+    \n\t |%s     |\
+    \n\t +------------------------------------------------------------------+ \n' % (
+    PLUS, LESS, QUIT, CHOOSE_CAT))
+
+MENU_CHOOSE_PROD = ('\t +----------------------------------------------------------------------+\
+    \n\t |Pour plus de produits, taper "%s"                                      |\
+    \n\t |Pour moins de produits, taper "%s"                                     |\
+    \n\t |Pour quitter, taper "%s"                                               |\
+    \n\t |                                                                      |\
+    \n\t |%s     |\
+    \n\t +----------------------------------------------------------------------+ \n' % (
+    PLUS, LESS, QUIT, CHOOSE_PROD))
+
+MENU_SAVE = ('\t +-----------------------------------+\
+    \n\t |Sauvegarder ?                      |\
+    \n\t |\t Si oui, taper "%s" ou "%s"    |\
+    \n\t |\t Si non, taper "%s" ou "%s"    |\
+    \n\t |\t Pour quitter, taper "%s"     |\
+    \n\t +-----------------------------------+ \n' % (
+    LOWER_YES, UPPER_YES, LOWER_NO, UPPER_NO, QUIT))
+
+MENU_INF = ('\t +--------------------+\
+    \n\t |Quitter, taper sur %s|\
+    \n\t +--------------------+ \n' % QUIT)
 
 # Variables used for some SQL requests
 LIMIT = 10

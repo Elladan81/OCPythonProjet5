@@ -102,15 +102,16 @@ class Controller:
                         config.LIMIT, config.OFFSET, config.TABLES
                     )
                 elif ch == 2:
+                    self.request_access.find_products()
+
+                elif ch == 3:
                     self.request_access.show_all_categories(
                         config.LIMIT, config.OFFSET, config.TABLES
-                                        )
-                elif ch == 3:
+                    )
+                elif ch == 4:
                     self.request_access.show_all_products(
                         config.LIMIT, config.OFFSET, config.TABLES
-                                        )
-                elif ch == 4:
-                    self.request_access.find_products()
+                    )
                 elif ch == 5:
                     break
             except ValueError:
