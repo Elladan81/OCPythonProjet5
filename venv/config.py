@@ -1,6 +1,9 @@
 #! usr/bin/env python3
 # -*- Coding: UTF-8 -*-
 
+
+from termcolor import colored, cprint
+
 # Name of the database
 DATABASE = "openfoodfacts"
 # Name of the user
@@ -68,6 +71,8 @@ PAYLOAD = {
 # Page number for the request, increase "PAGE_MAX" to get more products
 PAGE_MIN = 1
 PAGE_MAX = 10
+
+
 
 # Variables used for some SQL requests
 LIMIT = 10
