@@ -1,0 +1,11 @@
+
+*.xml
+*.iml
+.pyc
+venv/__pycache__/api.cpython-37.pyc
+*.pyc
+*.rst
+venv/Lib/site-packages/*
+venv/Scripts/*
+
+venv/pyvenv.cfg
