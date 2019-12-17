@@ -250,7 +250,7 @@ class View:
             self.mycursor.execute("SELECT * FROM Saved;")
             index = [config.N_SEARCH, config.PRODUCT, config.NUTRISCORE,
                      config.SUBSTITUT, config.NUTRISCORE, config.BRAND, config.LINK]
-            # This loop will display the index and the information related to
+            # This loop display the index and the information related to
             for item in self.mycursor.fetchall():
                 count = 0
                 x = 0
@@ -363,4 +363,4 @@ class View:
 
     def clear(self):
         """ This method allow a refresh of the screen"""
-        os.system('clear')
+        os.system('cls')
