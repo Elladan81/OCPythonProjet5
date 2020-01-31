@@ -16,14 +16,14 @@ import requests
 import api
 
 
-class Controller:
+class MainProgram:
     """this class is the main program. It will use api.py to create a list of categories and a list of products.
     it use database.py to create a database with mySQL"""
 
     def __init__(self):
         # test a conection with the database
         try:
-            print("Trying to connect toe the database : '{}".format(config.DATABASE))
+            print("Trying to connect to the database : '{}".format(config.DATABASE))
             self.database = mysql.connector.connect(user=config.USER,
                                                     password=config.PASSWORD,
                                                     host=config.HOST)
@@ -35,8 +35,7 @@ class Controller:
             elif error.errno == errorcode.ER_BAD_DB_ERROR:
                 print("Database does not exist")
             else:
-                print("Connection with database failed: \n\
-                Detected error : \n%s" % error)
+                print("Connection with database failed: \n Detected error : \n%s" % error)
 
         else:
             print("creating cursor ...")
@@ -136,5 +135,5 @@ class Controller:
 
 
 if __name__ == '__main__':
-    program = Controller()
+    program = MainProgram()
     program.main_loop()

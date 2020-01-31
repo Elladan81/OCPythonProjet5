@@ -6,8 +6,8 @@ create TABLE  Categories (
     ) ENGINE=InnoDB;
 
 create TABLE Products (
-    id INT unsigned NOT NULL AUTO_INCREMENT,
-    name VARCHAR(200),
+    id INT unsigned NOT NULL AUTO_INCREMENT COMMENT '',
+    name VARCHAR(200) COMMENT '',
     id_category SMALLINT(6) unsigned NOT NULL,
     brands VARCHAR(100),
     nutriscore CHAR(1),

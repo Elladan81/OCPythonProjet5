@@ -56,7 +56,7 @@ class View:
                 self.show_all_products(self.u_choice, off, table)
 
     def show_all_products(self, lim, off, table):
-        """ shows all the products """
+        """ shows all products """
         self.run = 1
         # change the limit and the offset for the table Products
         self.offset = off
@@ -280,8 +280,8 @@ class View:
         """
         self.run = 1
         while self.run:
-            self.mycursor.execute("SELECT * FROM Products\
-                WHERE id = %s" % number)
+            self.mycursor.execute('SELECT * FROM Products\
+                WHERE id = %s' % number)
             print("\n")
 
             # Display more informations
