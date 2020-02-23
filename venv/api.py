@@ -152,7 +152,7 @@ class Api:
 
     def add_products(self, database):
         """
-            put product into the database
+            add product into the database
         """
         self.changing_categories_for_products()
 

@@ -70,7 +70,7 @@ PAYLOAD = {
 
 # Page number for the request, increase "PAGE_MAX" to get more products
 PAGE_MIN = 1
-PAGE_MAX = 10
+PAGE_MAX = 30
 
 # Different texts to display.
 Y_CHOICE = colored('Votre choix est:', attrs=['underline'])

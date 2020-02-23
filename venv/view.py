@@ -158,14 +158,14 @@ class View:
     def find_better_product(self, product, category):
 
         try:
-            # Get the product and save it in a variable into a dict
+            # Get the product and save it in a dict
             self.mycursor.execute("SELECT * FROM Products\
                 WHERE Products.id = " + product)
             information = self.mycursor.fetchone()
             name_prod = str(information[1])
             nutriscore = str(information[4])
 
-            # This dictionnaire will be used for the table Saved
+            # This dict is used for the table Saved
             save_dic = {}
             save_dic['id_cat'] = category
             save_dic['name'] = name_prod
@@ -277,7 +277,7 @@ class View:
 
     def more_information(self, number):
         """
-            displays more informations about a choosen product
+            displays more informations about a product
         """
         self.run = 1
         while self.run:
@@ -307,7 +307,7 @@ class View:
     def display(self, req, lim, off, cat, elem, menu, error):
         """
             display all items from 'cat',
-            propose to the user to see more, less , quit
+            propose to the user to see more, less ,quit
             or return self.u_choice for the next
             method.
         """
