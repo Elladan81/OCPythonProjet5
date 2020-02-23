@@ -166,10 +166,10 @@ class View:
             nutriscore = str(information[4])
 
             # This dictionnaire will be used for the table Saved
-            dc = {}
-            dc['id_cat'] = category
-            dc['name'] = name_prod
-            dc['code'] = nutriscore
+            save_dic = {}
+            save_dic['id_cat'] = category
+            save_dic['name'] = name_prod
+            save_dic['code'] = nutriscore
 
             # Show products with a better nutriscore
             self.mycursor.execute("SELECT Products.id, Products.name, Products.nutriscore,\
@@ -178,7 +178,7 @@ class View:
                 ON Products.id_category = Categories.id\
                 WHERE Categories.id = %(id_cat)s \
                 AND Products.nutriscore <= %(code)s \
-                ORDER BY Products.nutriscore, rand() LIMIT 5", dc)
+                ORDER BY Products.nutriscore, rand() LIMIT 5", save_dic)
             # List of index to display
             index = [config.ID, config.NAME, config.NUTRISCORE,
                      config.SHOP, config.BRAND, config.LINK]
@@ -202,7 +202,7 @@ class View:
             user_saved = input()
             # Two possibilites, continue or quit
             if user_saved == "O" or user_saved == "o":
-                self.saved_products_choice(dc)
+                self.saved_products_choice(save_dic)
             elif user_saved == "N" or user_saved == "n":
                 pass
         except:
@@ -249,7 +249,8 @@ class View:
         while self.run:
             self.mycursor.execute("SELECT * FROM Saved;")
             index = [config.N_SEARCH, config.PRODUCT, config.NUTRISCORE,
-                     config.SUBSTITUT, config.NUTRISCORE, config.BRAND, config.LINK]
+                     config.SUBSTITUT, config.NUTRISCORE, config.BRAND,
+                     config.LINK]
             # This loop display the index and the information related to
             for item in self.mycursor.fetchall():
                 count = 0

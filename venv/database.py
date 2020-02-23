@@ -11,7 +11,7 @@ import config
 
 class Database:
     """
-        Manage database : creation, completion, etc.
+        Manage database
     """
 
     def __init__(self, cursor):
@@ -20,8 +20,8 @@ class Database:
     def use_database(self, dbname):
         """
             This method uses the database - if
-            the database doesn't exists, use the method create_method to create the
-            database.
+            the database doesn't exists, use the method create_database to
+            create one.
         """
         # Try to use the database
         try:
