@@ -15,7 +15,7 @@ import config
 class View:
     """
         View class is the connection
-        between the user and the program.
+        between the user and the database / main program
     """
 
     def __init__(self, cursor, database):

@@ -26,7 +26,7 @@ class Database:
         # Try to use the database
         try:
             self.mycursor.execute("USE {};".format(dbname))
-        # Print the error and use the method called create_database
+        # Print the error and use the method create_database
         except mysql.connector.Error as error:
             print("Database {} does not exists".format(dbname))
             if error.errno == errorcode.ER_BAD_DB_ERROR:

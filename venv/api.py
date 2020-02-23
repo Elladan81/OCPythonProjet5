@@ -143,10 +143,10 @@ class Api:
         ids = range(0, len(self.id_name))
 
         for number in ids:
-            for produit in self.cleaned_products:
-                if produit['categories'] == self.id_name[number][1]:
-                    # print("OUI", produit['categories'], truc[n][name])
-                    produit['categories'] = self.id_name[number][0]
+            for product in self.cleaned_products:
+                if product['categories'] == self.id_name[number][1]:
+                    # print("OUI", product['categories'], truc[n][name])
+                    product['categories'] = self.id_name[number][0]
 
         return self.cleaned_products
 

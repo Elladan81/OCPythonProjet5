@@ -23,7 +23,8 @@ class MainProgram:
     def __init__(self):
         # test a conection with the database
         try:
-            print("Trying to connect to the database : '{}".format(config.DATABASE))
+            print("Trying to connect to the database : '{}".format(
+                config.DATABASE))
             self.database = mysql.connector.connect(user=config.USER,
                                                     password=config.PASSWORD,
                                                     host=config.HOST)
@@ -35,7 +36,8 @@ class MainProgram:
             elif error.errno == errorcode.ER_BAD_DB_ERROR:
                 print("Database does not exist")
             else:
-                print("Connection with database failed: \n Detected error : \n%s" % error)
+                print(
+                    "Connection with database failed: \n Detected error : \n%s" % error)
 
         else:
             print("creating cursor ...")
@@ -102,16 +104,7 @@ class MainProgram:
                     )
                 elif ch == 2:
                     self.request_access.find_products()
-
                 elif ch == 3:
-                    self.request_access.show_all_categories(
-                        config.LIMIT, config.OFFSET, config.TABLES
-                    )
-                elif ch == 4:
-                    self.request_access.show_all_products(
-                        config.LIMIT, config.OFFSET, config.TABLES
-                    )
-                elif ch == 5:
                     break
             except ValueError:
                 print("Entrez un chiffre qui correspond ...")

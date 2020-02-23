@@ -5,7 +5,7 @@
 from termcolor import colored, cprint
 
 # Name of the database
-DATABASE = "openfoodfacts"
+DATABASE = "openfoodfacts3"
 # Name of the user
 USER = "OpenClassrooms"
 # Password uses to connect the user
@@ -119,9 +119,7 @@ MAIN_MENU_TITLE = colored(
 MAIN_MENU_TEXT = ('\n Que voulez-vous faire :\t\t\t \n\
     1) Quel aliment souhaitez vous remplacer ?\t\t \n\
     2) Retrouver mes aliments substitués\t\t \n\
-    3) Consulter les catégories\t \n\
-    4) Retrouver les produits\t \n\
-    5) Quitter\t\t\t\t\t ')
+    3) Quitter\t\t\t\t\t ')
 
 MAIN_MENU = ('\n\n%s \n \t %s \t\t\t %s \n%s' % (
     MAIN_MENU_DECORATION_1, MAIN_MENU_TITLE, MAIN_MENU_TEXT, MAIN_MENU_DECORATION_1))
@@ -134,11 +132,11 @@ SS_MENU = ("\t +----------------------------------+\
     PLUS, LESS, QUIT))
 
 SS_MENU_2 = ("\t +-------------------------------------------+\
-    \n\t |Pour plus d'elements , tapez '%s'           |\
-    \n\t |Pour moins d'elements , tapez '%s'          |\
-    \n\t |Pour quitter, tapez '%s'                    |\
+    \n\t |Pour plus d'elements , tapez '%s'          |\
+    \n\t |Pour moins d'elements , tapez '%s'         |\
+    \n\t |Pour quitter, tapez '%s'                   |\
     \n\t |Pour plus d'informations, tapez son numéro |\
-    \n\t +-------------------------------------------+ \n" % (
+    \n\t +-------------------------------------------+\n" % (
     PLUS, LESS, QUIT))
 
 MENU_CHOOSE_CAT = ('\t +------------------------------------------------------------------+\
@@ -159,12 +157,12 @@ MENU_CHOOSE_PROD = ('\t +-------------------------------------------------------
     \n\t +----------------------------------------------------------------------+ \n' % (
     PLUS, LESS, QUIT, CHOOSE_PROD))
 
-MENU_SAVE = ('\t +-----------------------------------+\
-    \n\t |Sauvegarder ?                      |\
-    \n\t |\t Si oui, taper "%s" ou "%s"    |\
-    \n\t |\t Si non, taper "%s" ou "%s"    |\
-    \n\t |\t Pour quitter, taper "%s"     |\
-    \n\t +-----------------------------------+ \n' % (
+MENU_SAVE = ('\t +---------------------------------+\
+    \n\t |Sauvegarder ?                     |\
+    \n\t |\t Si oui, taper "%s" ou "%s"       |\
+    \n\t |\t Si non, taper "%s" ou "%s"       |\
+    \n\t |\t Pour quitter, taper "%s"        |\
+    \n\t +---------------------------------+ \n' % (
     LOWER_YES, UPPER_YES, LOWER_NO, UPPER_NO, QUIT))
 
 MENU_INF = ('\t +--------------------+\
