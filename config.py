@@ -2,10 +2,10 @@
 # -*- Coding: UTF-8 -*-
 
 
-from termcolor import colored, cprint
+from termcolor import colored
 
 # Name of the database
-DATABASE = "openfoodfacts3"
+DATABASE = "openfoodfacts6"
 # Name of the user
 USER = "OpenClassrooms"
 # Password uses to connect the user
