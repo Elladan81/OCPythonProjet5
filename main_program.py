@@ -4,31 +4,29 @@
 # Programme Python 3 Type
 # Autor: Mickael Lalevée 2019
 
-# Informations:
-
 import mysql.connector
 from mysql.connector import errorcode
 
+import api
 import config
 import database
 import view
-import requests
-import api
 
 
 class MainProgram:
-    """this class is the main program. It will use api.py to create a list of categories and a list of products.
-    it use database.py to create a database with mySQL"""
+    """this class is the main program. It will use api.py to create a list of
+    categories and a list of products.
+    it uses database.py to create a database with mySQL"""
 
     def __init__(self):
-        # test a conection with the database
+        # test a connection with the database
         try:
             print("Trying to connect to the database : '{}".format(
                 config.DATABASE))
             self.database = mysql.connector.connect(user=config.USER,
                                                     password=config.PASSWORD,
                                                     host=config.HOST)
-            print("\tConnection etablished")
+            print("\tConnection established")
         # if there is an error :
         except mysql.connector.Error as error:
             if error.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -37,7 +35,8 @@ class MainProgram:
                 print("Database does not exist")
             else:
                 print(
-                    "Connection with database failed: \n Detected error : \n%s" % error)
+                    "Connection with database failed: \n Detected error : \n%s"
+                    % error)
 
         else:
             print("creating cursor ...")
@@ -57,7 +56,6 @@ class MainProgram:
         """
             This method will initiate the database.
             Create the database and tables.
-            Then save the changement
         """
         print("Use of the database ...")
         self.db_access.use_database(config.DATABASE)
@@ -87,7 +85,7 @@ class MainProgram:
         """
             This method contains the loop for displaying
             products and product's categories. It also
-            allows to search and find saved products.
+            allows searching and find saved products.
         """
         # Loop for the main menu with multiple choices
         while 1:
@@ -107,7 +105,7 @@ class MainProgram:
                 elif ch == 3:
                     break
             except ValueError:
-                print("Entrez un chiffre qui correspond ...")
+                print("Entrez un chiffre qui correspond.")
                 pass
 
     def main_loop(self):

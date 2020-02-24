@@ -1,19 +1,20 @@
 #! usr/bin/env python3
 # -*- Coding: UTF-8 -*-
 
-
 from termcolor import colored
 
 # Name of the database
-DATABASE = "openfoodfacts6"
+DATABASE = "openfoodfacts3"
 # Name of the user
 USER = "OpenClassrooms"
 # Password uses to connect the user
 PASSWORD = "Projet5openclassrooms"
 # Host connected
 HOST = "localhost"
+
 # Description of the tables
 TABLES = {}
+
 TABLES['Categories'] = (
     "CREATE TABLE IF NOT EXISTS Categories ("
     " id SMALLINT(6) unsigned NOT NULL AUTO_INCREMENT,"
@@ -70,7 +71,7 @@ PAYLOAD = {
 
 # Page number for the request, increase "PAGE_MAX" to get more products
 PAGE_MIN = 1
-PAGE_MAX = 30
+PAGE_MAX = 10
 
 # Different texts to display.
 Y_CHOICE = colored('Votre choix est:', attrs=['underline'])
@@ -122,26 +123,27 @@ MAIN_MENU_TEXT = ('\n Que voulez-vous faire :\t\t\t \n\
     3) Quitter\t\t\t\t\t ')
 
 MAIN_MENU = ('\n\n%s \n \t %s \t\t\t %s \n%s' % (
-    MAIN_MENU_DECORATION_1, MAIN_MENU_TITLE, MAIN_MENU_TEXT, MAIN_MENU_DECORATION_1))
+    MAIN_MENU_DECORATION_1, MAIN_MENU_TITLE, MAIN_MENU_TEXT,
+    MAIN_MENU_DECORATION_1))
 
 SS_MENU = ("\t +----------------------------------+\
-    \n\t |Pour plus d'elements , taper '%s'  |\
-    \n\t |Pour moins d'elements , taper '%s' |\
+    \n\t |Pour plus d'éléments , taper '%s'  |\
+    \n\t |Pour moins d'éléments , taper '%s' |\
     \n\t |Pour quitter, taper '%s'           |\
     \n\t +----------------------------------+ \n" % (
     PLUS, LESS, QUIT))
 
 SS_MENU_2 = ("\t +-------------------------------------------+\
-    \n\t |Pour plus d'elements , tapez '%s'          |\
-    \n\t |Pour moins d'elements , tapez '%s'         |\
+    \n\t |Pour plus d'éléments , tapez '%s'          |\
+    \n\t |Pour moins d'éléments , tapez '%s'         |\
     \n\t |Pour quitter, tapez '%s'                   |\
     \n\t |Pour plus d'informations, tapez son numéro |\
     \n\t +-------------------------------------------+\n" % (
     PLUS, LESS, QUIT))
 
 MENU_CHOOSE_CAT = ('\t +------------------------------------------------------------------+\
-    \n\t |Pour plus de categories, taper "%s"                                |\
-    \n\t |Pour moins de categories, taper "%s"                               |\
+    \n\t |Pour plus de catégories, taper "%s"                                |\
+    \n\t |Pour moins de catégories, taper "%s"                               |\
     \n\t |Pour quitter, taper "%s"                                           |\
     \n\t |                                                                  |\
     \n\t |%s     |\

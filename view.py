@@ -1,13 +1,7 @@
 #! usr/bin/env python3
 # -*- Coding: UTF-8 -*-
 
-
 import os
-import sys
-import string
-
-import mysql.connector
-from mysql.connector import errorcode
 
 import config
 
